@@ -1,7 +1,6 @@
-import pygame,time
+import pygame,time,cv2
 from menu import Menu
 import random as r
-import cv2
 from pen import Pen
 
 class Game:
