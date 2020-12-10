@@ -38,6 +38,7 @@ class Game:
 		self.pipe_x.append([self.W,self.W])
 		Y = r.randint(190,400)
 		self.pipe_y.append([Y+20,Y-400-20])
+		
 	def Ground(self):
 		self.board.blit(self.ground,(0,470))
 		self.board.blit(self.ground,(self.W//3,470))
@@ -88,6 +89,7 @@ class Game:
 			if self.bird_x in range(x[1]+12,x[1]+82) and self.bird_y in range(self.pipe_y[index][1],self.pipe_y[index][1]+330): self.dead = True
 		for index,x in enumerate(self.pipe_x):
 			if self.bird_x in range(x[0]+12,x[0]+82) and self.bird_y in range(self.pipe_y[index][0]-20,self.pipe_y[index][0]+320): self.dead = True
+				
 	def out_of_screen(self):
 		if self.bird_y not in range(0,470): self.dead = True
                    
